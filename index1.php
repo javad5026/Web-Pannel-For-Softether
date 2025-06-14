@@ -1,26 +1,6 @@
-<?php
-// Please dont touch or change the codes.//
-session_start();
 
-$error = '';
- // create by sudoweb ; telegram id : sudoweb_5026 //
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
-    $user = $_POST['username'] ?? '';
-    $pass = $_POST['password'] ?? '';
-
-
-    if ($user === 'your user name ?' && $pass === 'your password ?') {
-        $_SESSION['logged_in'] = true;
-        header('Location: index.php');
-        exit;
-    } else {
-        $error = 'نام کاربری یا رمز عبور اشتباه است.';
-    }
-}
-
-if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
-    ?>
+<!-- // Please dont touch or change the codes.//
+// create by sudoweb ; telegram id : sudoweb_5026 //-->
     <!DOCTYPE html>
     <html lang="fa">
     <head>
